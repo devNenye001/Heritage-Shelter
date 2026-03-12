@@ -1,0 +1,138 @@
+.hs-qna-wrapper {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.hs-qna-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Intro Side */
+.hs-qna-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hs-qna-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+/* Right Accordion Side */
+.hs-qna-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hs-qna-item {
+  background-color: #f4f4f4; /* Flat gray background as per design */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: none; /* Shadow explicitly avoided */
+}
+
+.hs-qna-question-row {
+  padding: 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hs-qna-question {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.hs-qna-toggle-icon {
+  background-color: #e0e0e0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active State Styling */
+.hs-qna-active .hs-qna-toggle-icon {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.hs-qna-answer-box {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hs-qna-active .hs-qna-answer-box {
+  max-height: 200px; /* Adjust based on content */
+  opacity: 1;
+  padding-bottom: 30px;
+}
+
+.hs-qna-answer {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 1024px) {
+  .hs-qna-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .hs-qna-intro {
+    text-align: center;
+  }
+  
+  .hs-qna-desc {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hs-qna-wrapper {
+    padding: 60px 30px;
+  }
+
+  .hs-qna-question-row {
+    padding: 20px;
+  }
+
+  .hs-qna-question {
+    font-size: 16px;
+  }
+
+  .hs-qna-title {
+    font-size: 28px;
+  }
+}

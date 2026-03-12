@@ -1,0 +1,218 @@
+/* Container styling */
+.hs-ab-root {
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.hs-ab-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* Animations - Reveal on Scroll */
+.hs-ab-animate-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hs-ab-visible.hs-ab-animate-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hs-abs-hero-wrapper {
+  padding: 80px 40px 40px 40px;
+  background-color: #ffffff;
+}
+
+.hs-abs-hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Text - Centered & Balanced */
+.hs-abs-hero-header {
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.hs-abs-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.hs-abs-hero-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Video Container - No Box Shadows */
+.hs-abs-hero-video-box {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 16px; /* Match the rounded corners in your design */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #f2f2f2; /* Light border for flat definition */
+}
+
+.hs-abs-hero-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Cinematic wide-screen */
+  display: block;
+  object-fit: cover;
+}
+
+/* Hover effect for the video box */
+.hs-abs-hero-video-box:hover .hs-abs-hero-video {
+  transform: scale(1.01);
+  transition: transform 0.6s ease;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .hs-abs-hero-wrapper {
+    padding: 60px 30px;
+  }
+
+  .hs-abs-hero-description {
+    font-size: 15px;
+    text-align: justify; /* Keeps it neat on tablet */
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hs-abs-hero-header {
+    margin-bottom: 30px;
+  }
+
+  .hs-abs-hero-title {
+    font-size: 26px;
+  }
+
+  .hs-abs-hero-video-box {
+    border-radius: 8px; /* Slightly less rounded for mobile */
+  }
+}
+
+/* Section Container */
+.hs-cert-section {
+  padding: 100px 5%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.hs-cert-container {
+  max-width: 1000px; /* Constrained for better readability */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling - Playfair Display */
+.hs-cert-header {
+  margin-bottom: 50px;
+}
+
+.hs-cert-main-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+/* Intro Text - DM Sans 500 */
+.hs-cert-intro-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Image Styling - Strictly NO Box Shadow */
+.hs-cert-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.hs-cert-image {
+  width: 100%;
+  max-width: 700px; /* Matches the visual scale of the design */
+  height: auto;
+  display: block;
+  object-fit: contain;
+  /* No box shadow as requested */
+  border: 1px solid #f0f0f0; /* Subtle border for definition */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hs-cert-section {
+    padding: 60px 30px;
+  }
+
+  .hs-cert-main-title {
+    font-size: 28px;
+  }
+
+  .hs-cert-intro-text {
+    font-size: 14px;
+    text-align: justify; /* Optional: matches some legal text styles */
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .hs-ab-compliance-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .hs-ab-comp-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hs-ab-header {
+    padding: 80px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hs-ab-compliance {
+    padding: 60px 0;
+  }
+  
+  .hs-ab-header {
+    padding: 60px 30px;
+  }
+  
+  .hs-ab-comp-title {
+    font-size: 19px;
+  }
+}

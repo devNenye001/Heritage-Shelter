@@ -1,0 +1,157 @@
+
+.footer {
+  width: 100%;
+  background: #ffffff;
+  color: #666;
+  font-family: 'Inter', sans-serif;
+  padding-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* BRAND */
+
+.footer-brand {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-logo {
+  height: 30px;
+  width: 150px;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* LINKS GRID */
+
+.footer-links-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color .3s;
+  font-weight: 400;
+}
+
+.footer-list a:hover {
+  color: #0b47a9;
+}
+
+/* CONTACT */
+
+.contact-list a,
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contact-icon {
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+/* BOTTOM */
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  padding: 25px 5%;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+
+.footer-container {
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
+.footer-brand {
+  align-items: left;
+}
+
+.footer-links-grid {
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  text-align: left;
+}
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+.footer-links-grid {
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+
+.footer-container {
+  gap: 40px;
+}
+
+.footer-brand {
+  max-width: 100%;
+}
+
+.contact-list {
+  align-items: left;
+}
+
+}

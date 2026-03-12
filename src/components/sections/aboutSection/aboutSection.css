@@ -1,0 +1,119 @@
+/* Container styling */
+.hs-abs-wrapper {
+  padding: 60px 40px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hs-abs-container {
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Visibility class triggered by JS Observer */
+.hs-abs-visible .hs-abs-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge - Gray Pill */
+.hs-abs-badge-box {
+  background-color: #f0f0f0;
+  padding: 4px 15px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.hs-abs-badge-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 13px;
+  color: #666666;
+}
+
+/* Heading - Playfair Display */
+.hs-abs-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Description - Inter 500 */
+.hs-abs-description {
+  font-weight: 400;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 26px;
+}
+
+/* Button Styling - Strictly NO box-shadow */
+.hs-abs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 18px 45px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.hs-abs-btn:hover {
+  background-color: #222222;
+  transform: scale(1.03); /* Subtle scale pop instead of shadow */
+}
+
+.hs-abs-btn-icon {
+  font-size: 20px;
+  transform: translateX(-5px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.hs-abs-btn:hover .hs-abs-btn-icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hs-abs-wrapper {
+    padding: 60px 30px;
+  }
+
+  .hs-abs-break {
+    display: none;
+  }
+
+  .hs-abs-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hs-abs-heading {
+  font-size: 26px;
+}
+
+/* Description - Inter 500 */
+.hs-abs-description {
+  font-size: 16px;
+}
+}

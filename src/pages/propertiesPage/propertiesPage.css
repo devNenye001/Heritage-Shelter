@@ -1,0 +1,199 @@
+.hs-pg-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  padding: 80px 5%;
+}
+
+.hs-pg-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* --- Header & Search Styling --- */
+.hs-pg-header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.hs-pg-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 32px; 
+  color: #1a1a1a;
+}
+
+.hs-pg-search-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.hs-pg-input-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 100px;
+  padding: 0 25px;
+  height: 56px;
+  transition: border-color 0.3s ease;
+}
+
+.hs-pg-input-wrapper:focus-within {
+  border-color: #0b47a9;
+}
+
+.hs-pg-search-icon {
+  color: #999;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.hs-pg-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+.hs-pg-search-btn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 40px;
+  height: 56px;
+  border-radius: 100px;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.hs-pg-search-btn:hover {
+  opacity: 0.85;
+}
+
+/* --- Grid Layout --- */
+.hs-pg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 Columns on desktop */
+  column-gap: 20px;
+  row-gap: 40px;
+  animation: hs-pg-fadeIn 1s ease-out;
+}
+
+.hs-pg-card-holder {
+  width: 100%;
+}
+
+/* --- Animations --- */
+@keyframes hs-pg-fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 1200px) {
+  .hs-pg-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hs-pg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hs-pg-search-box {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  
+  .hs-pg-input-wrapper, .hs-pg-search-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hs-pg-wrapper {
+    padding: 40px 30px;
+  }
+  .hs-pg-search-btn{
+    height: 48px;
+  }
+
+  .hs-pg-grid {
+    display: flex;
+    flex-direction: column; /* Force 100% width vertical stack */
+    gap: 50px;
+  }
+
+  .hs-pg-card-holder {
+    width: 100%;
+  }
+  .hs-pg-input {
+    font-size: 14px;
+    height: 40px;
+  }
+  .hs-pg-title {
+    font-size: 28px;
+  }
+}
+
+/* No Results Styling */
+.hs-pg-no-results {
+  grid-column: 1 / -1; /* Spans full width of the grid */
+  text-align: center;
+  padding: 100px 20px;
+  animation: hs-pg-fadeIn 0.5s ease-in;
+}
+
+.hs-pg-no-results h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.hs-pg-no-results p {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Clear Button - Zero Shadows */
+.hs-pg-clear-btn {
+  background: none;
+  border: 2px solid #000;
+  padding: 12px 30px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hs-pg-clear-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Ensure search input looks clean */
+.hs-pg-input::placeholder {
+  color: #bbb;
+  font-weight: 400;
+}

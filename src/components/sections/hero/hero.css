@@ -1,0 +1,128 @@
+.hero {
+  width: 100%;
+  padding: 80px 0 0 0; /* Top padding for spacing, 0 at bottom to meet image */
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- Text Styling --- */
+.hero-text-content {
+  padding: 0 5%;
+  margin-bottom: 50px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 3rem; /* Responsive font size */
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.highlight-blue {
+  color: #0b47a9;
+}
+
+.hero-subtitle {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* --- Button Styling (No Box Shadow) --- */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 18px 45px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-cta:hover {
+  background-color: #222222;
+  transform: translateY(-3px); /* Movement instead of shadow */
+}
+
+.cta-icon {
+  font-size: 1.2rem;
+}
+
+/* --- Image Styling --- */
+.hero-image-container {
+  width: 100%;
+  margin-top: 20px;
+  animation: slideUp 1.2s ease-out;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 50px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-cta {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .hero-main-img {
+  height: 250px;
+}
+}

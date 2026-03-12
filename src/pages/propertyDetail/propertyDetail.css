@@ -1,0 +1,209 @@
+.hs-det-wrapper {
+  width: 100%;
+  padding: 80px 5%;
+  background-color: #ffffff;
+}
+
+.hs-det-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hs-det-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #666;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+.hs-det-back:hover {
+  color: #0b47a9;
+}
+
+/* --- Media Section --- */
+.hs-det-media-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  height: 500px;
+  margin-bottom: 50px;
+  animation: hs-fade-in 0.8s ease-out;
+}
+
+.hs-det-main-img-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hs-det-gallery-box {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.hs-det-img, .hs-det-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hs-det-gallery-img {
+  border-radius: 12px;
+}
+
+/* --- Layout Split --- */
+.hs-det-content-split {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* --- Typography (Strict 500) --- */
+.hs-det-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.hs-det-loc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hs-det-price {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: #0b47a9;
+  margin-bottom: 30px;
+}
+
+.hs-det-description {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.hs-det-subheading {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hs-det-features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.hs-det-features-list li {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  color: #666;
+  padding-left: 20px;
+  position: relative;
+}
+
+.hs-det-features-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #0b47a9;
+}
+
+/* --- Sidebar Contact Card (Zero Shadows) --- */
+.hs-det-contact-card {
+  border: 1px solid #eeeeee;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+
+.hs-det-card-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.hs-det-agent-box {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 20px auto;
+}
+
+.hs-det-agent-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hs-det-card-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hs-det-contact-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hs-det-contact-btn:hover {
+  transform: scale(1.03);
+}
+
+/* --- Animations --- */
+@keyframes hs-fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .hs-det-media-grid { height: auto; grid-template-columns: 1fr; }
+  .hs-det-content-split { grid-template-columns: 1fr; gap: 40px; }
+  .hs-det-sidebar { position: static; }
+}
+
+@media (max-width: 600px) {
+  .hs-det-features-list { grid-template-columns: 1fr; }
+  .hs-det-agent-box { width: 100%; height: auto; }
+  .hs-det-title{
+    font-size: 28px;
+  }
+}

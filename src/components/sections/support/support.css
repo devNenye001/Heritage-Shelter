@@ -1,0 +1,257 @@
+/* --- Support Section Container --- */
+.support-section__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: "DM Sans", sans-serif;
+  opacity: 0;
+  animation: support-section__fadeInPage 1s ease-out forwards;
+}
+
+/* --- Content Area --- */
+.support-section__content-area {
+  flex: 0 0 40%;
+  padding-right: 50px;
+  animation: support-section__slideInLeft 1s ease-out forwards;
+}
+
+.support-section__content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography with Playfair Display for headings and DM Sans with 500 weight for bolder text */
+.support-section__main-heading {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.support-section__description {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.support-section__sub-heading {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+/* --- Contact Options --- */
+.support-section__contact-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.support-section__contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between contact options */
+}
+
+.support-section__contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.support-section__contact-link {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  padding: 10px 0; /* Add top/bottom padding for hover zone */
+}
+
+/* NO BOX SHADOWS - as requested */
+.support-section__cta-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 15px; 
+  box-shadow: none !important; 
+  font-size: 15px;
+}
+
+.support-section__cta-button .support-section__icon {
+  margin-right: 10px;
+}
+
+/* Hover Effects without box shadow */
+.support-section__contact-link:hover {
+  color: #000000; /* Primary Blue from brand for hover text */
+  transform: translateX(5px); /* Gentle slide-in effect */
+}
+
+.support-section__cta-button:hover {
+  background-color: #575859; /* Blue on button hover */
+  transform: translateY(-3px) scale(1.03); /* Subtle up/scale pop */
+}
+
+.support-section__cta-button:active {
+  transform: translateY(1px) scale(1); /* Button press effect */
+}
+
+/* Icons */
+.support-section__icon {
+  font-size: 1.5rem;
+  color: #666666; /* Inherit color from description text usually */
+}
+
+.support-section__cta-button .support-section__icon {
+  color: #ffffff; /* Special icon color inside button */
+}
+
+/* --- Image Area --- */
+.support-section__image-area {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: support-section__slideInRight 1s ease-out forwards;
+}
+
+.support-section__image-wrapper {
+  max-width: 90%; /* Ensure responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support-section__main-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Optional cap on height */
+  object-fit: contain;
+}
+
+/* --- RESPONSIVE LOGIC --- */
+
+/* Tablets and Laptops (max 1024px) */
+@media (max-width: 1024px) {
+  .support-section__container {
+    flex-direction: column-reverse; /* Stacks image above text */
+    padding: 60px 30px;
+  }
+
+  .support-section__content-area {
+    flex: 0 0 100%;
+    width: 100%;
+    padding-right: 0;
+    text-align: left;
+    margin-bottom: 30px;
+    order: 2; /* Text goes second */
+  }
+
+  .support-section__image-area {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 40px;
+    order: 1; /* Image goes first */
+  }
+
+  .support-section__main-heading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .support-section__contact-options {
+    align-items: left;
+  }
+
+  .support-section__contact-list {
+    align-items: left;
+  }
+
+  .support-section__contact-item {
+    justify-content: left;
+  }
+}
+
+/* Mobile Phones (max 600px) */
+@media (max-width: 600px) {
+  .support-section__container {
+    padding: 40px 30px;
+  }
+
+  .support-section__main-heading {
+    font-size: 2rem;
+  }
+
+  .support-section__description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .support-section__sub-heading {
+    font-size: 1.3rem;
+  }
+
+  .support-section__cta-button {
+    width: 100%; /* Full width button on small mobile */
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+}
+
+/* --- COOL ANIMATIONS --- */
+
+@keyframes support-section__fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes support-section__slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes support-section__slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

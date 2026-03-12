@@ -1,0 +1,100 @@
+/* Container and Section Styling */
+.hs-prop-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Header with Grid layout to match design */
+.hs-prop-header {
+  max-width: 1440px;
+  margin: 0 auto 50px auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+.hs-prop-badge {
+  background-color: #f0f0f0;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #666666;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hs-prop-main-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 38px;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.hs-prop-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Desktop Scroll Logic */
+.hs-prop-scroll-container {
+    width: 100%;
+  padding: 10px 40px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.hs-prop-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.hs-prop-grid-flow {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+}
+
+.hs-prop-item-wrapper {
+  width: 350px; /* Fixed width for horizontal scrolling */
+}
+
+/* Responsive Logic */
+@media (max-width: 992px) {
+  .hs-prop-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hs-prop-section {
+    padding: 60px 0;
+  }
+
+  .hs-prop-scroll-container {
+    padding: 0 30px;
+  }
+.hs-prop-main-heading{
+    font-size: 26px;
+}
+  /* Vertical Stack for Mobile */
+  .hs-prop-grid-flow {
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .hs-prop-item-wrapper {
+    width: 100%; /* Card takes full width */
+  }
+}

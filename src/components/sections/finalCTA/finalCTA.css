@@ -1,0 +1,108 @@
+.hs-fcta-wrapper {
+  padding: 60px 40px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hs-fcta-inner {
+  max-width: 850px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Scroll Reveal Animation Trigger */
+.hs-fcta-reveal .hs-fcta-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Heading - Playfair Display */
+.hs-fcta-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+/* Subtext - DM Sans 500 */
+.hs-fcta-subtext {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(16px, 2vw, 19px);
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+
+/* Button Container */
+.hs-fcta-action {
+  display: flex;
+  justify-content: center;
+}
+
+/* Button Styling - Strictly NO box-shadow */
+.hs-fcta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 55px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+/* Cool Hover: Slight expansion and color shift */
+.hs-fcta-button:hover {
+  background-color: #1a1a1a;
+  padding: 20px 65px; /* Widens slightly on hover */
+  transform: scale(1.02);
+}
+
+.hs-fcta-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.hs-fcta-button:hover .hs-fcta-icon {
+  transform: translateX(8px);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hs-fcta-wrapper {
+    padding: 40px 30px;
+    padding-bottom: 60px;
+  }
+
+  .hs-fcta-br {
+    display: none;
+  }
+
+  .hs-fcta-button {
+    width: 100%;
+    justify-content: center;
+    padding: 18px 40px;
+  }
+  
+  .hs-fcta-button:hover {
+    padding: 18px 40px; /* Disable widening on mobile */
+  }
+
+  .hs-fcta-heading {
+    font-size: 28px;
+  }
+}
