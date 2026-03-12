@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import './footer.css';
 
@@ -26,9 +27,9 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h4 className="footer-heading">COMPANY</h4>
             <ul className="footer-list">
-              <li><a href="/properties">Properties</a></li>
-              <li><a href="/about">About us</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/properties">Properties</Link></li>
+              <li><Link to="/about">About us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -36,9 +37,9 @@ const Footer: React.FC = () => {
           <div className="footer-col">
             <h4 className="footer-heading">PROPERTIES</h4>
             <ul className="footer-list">
-              <li><a href="/properties">Buy a House</a></li>
-              <li><a href="/properties">Rent a House</a></li>
-              <li><a href="/properties">Sell a House</a></li>
+              <li><Link to="/properties">Buy a House</Link></li>
+              <li><Link to="/properties">Rent a House</Link></li>
+              <li><Link to="/properties">Sell a House</Link></li>
             </ul>
           </div>
 

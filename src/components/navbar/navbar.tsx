@@ -37,10 +37,10 @@ const Navbar: React.FC = () => {
           </div>
 
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/properties">Properties</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/about">About</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/properties">Properties</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/about">About</Link></li>
           </ul>
 
           <div className="nav-actions">
@@ -57,10 +57,10 @@ const Navbar: React.FC = () => {
       {/* Mobile Menu - Slide Down Animation */}
       <div className={`mobile-overlay ${isOpen ? 'show' : ''}`}>
         <ul className="mobile-links">
-          <li><a href="/" onClick={toggleMenu}>Home</a></li>
-          <li><a href="/properties" onClick={toggleMenu}>Properties</a></li>
-          <li><a href="/services" onClick={toggleMenu}>Services</a></li>
-          <li><a href="/about" onClick={toggleMenu}>About</a></li>
+            <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+            <li><Link to="/properties" onClick={toggleMenu}>Properties</Link></li>
+            <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
+            <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
           <li className="m-btn-row">
             <Link to="/contact">
               <button className="contact-btn">Contact Us</button>
