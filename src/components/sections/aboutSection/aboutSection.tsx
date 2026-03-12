@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-import './aboutSection.css';
+import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import "./aboutSection.css";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,11 +10,11 @@ const AboutSection: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('hs-abs-visible');
+            entry.target.classList.add("hs-abs-visible");
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -36,17 +37,19 @@ const AboutSection: React.FC = () => {
 
         {/* Description - Inter 500 */}
         <p className="hs-abs-description">
-          Heritage Shelter is a trusted real estate company dedicated to helping clients find quality homes 
-          and investment opportunities. We focus on transparency, reliability, and delivering the best property 
-          solutions for individuals, families, and investors. 
-          Whether you are looking to buy, rent, or invest, our team is here to guide you every step of the way.
+          Heritage Shelter is a trusted real estate company dedicated to helping
+          clients find quality homes and investment opportunities. We focus on
+          transparency, reliability, and delivering the best property solutions
+          for individuals, families, and investors. Whether you are looking to
+          buy, rent, or invest, our team is here to guide you every step of the
+          way.
         </p>
 
         {/* Action Button - No Shadows */}
         <div className="hs-abs-action-area">
-          <a href="/about" className="hs-abs-btn">
+          <Link to="/about" className="hs-abs-btn">
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
     </section>
