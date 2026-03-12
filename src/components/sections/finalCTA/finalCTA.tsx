@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './finalCTA.css';
+import { Link } from 'react-router-dom';
 
 const FinalCTA: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -37,9 +38,10 @@ const FinalCTA: React.FC = () => {
 
         {/* Action Area */}
         <div className="hs-fcta-action">
-          <a href="/contact" className="hs-fcta-button">
+            <Link to="/contact" className="hs-fcta-button">
             Contact Us
-          </a>
+          </Link>
+         
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import './hero.css';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -18,10 +19,10 @@ const Hero: React.FC = () => {
             estate investments in Abuja and across Nigeria.
           </p>
 
-          <a href="/properties" className="hero-cta">
+<Link to="/properties" className="hero-cta">
             View Properties
             <FiArrowRight className="cta-icon" />
-          </a>
+          </Link>
         </div>
 
         {/* Hero Image Area */}
