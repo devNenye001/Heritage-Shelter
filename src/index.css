@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: 'Dm Sans', sans-serif;
 }
+
+body{
+  display: none;
+}
